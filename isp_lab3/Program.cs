@@ -189,7 +189,19 @@ namespace isp_lab3
     }
     public class ForOdejda : Shkaf
     {
+        ForOdejda[] data;
         private string model; //модель
+        public ForOdejda this[int index]
+        {
+            get
+            {
+                return data[index];
+            }
+            set
+            {
+                data[index] = value;
+            }
+        }
         public ForOdejda(int date, string material, string color, string model) : base(date, material, color)//конструктор
         {
             this.model = model;
